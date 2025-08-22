@@ -13,6 +13,18 @@ export const Navbar = () => {
 						<button className="btn btn-primary">Check the Context in action</button>
 					</Link>
 				</div>
+				<button
+					className="btn btn-outline-danger"
+					onClick={() => {
+						sessionStorage.removeItem("token");
+						window.location.href = "/login";
+					}}
+				>
+					Logout
+				</button>
+				<Link to="/signup" className="btn btn-outline-primary mx-2">
+					Sign Up
+				</Link>
 			</div>
 		</nav>
 	);
